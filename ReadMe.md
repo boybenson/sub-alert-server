@@ -5,9 +5,7 @@
 The **Subscription Reminder Backend** is a Go Fiber API that helps users track, manage, and receive reminders for their online subscriptions.  
 It’s designed for personal use or as a foundation for a full SaaS subscription management system.
 
-The service supports adding subscriptions, scheduling reminders, and (in the Later version) integrating AI-based analytics and payment tracking.
-
----
+## The service supports adding subscriptions, scheduling reminders, and (in future versions) integrating AI-based analytics, payment tracking, and even direct subscription cancellation features
 
 ## 🧱 Tech Stack
 
@@ -26,8 +24,7 @@ The service supports adding subscriptions, scheduling reminders, and (in the Lat
 
 ```bash
 .
-├── cmd/
-│   └── main.go          # Entry point of the application
+├──── main.go          # Entry point of the application
 ├── internal/
 │   ├── routes/          # Route definitions
 │   ├── handlers/        # HTTP handlers
