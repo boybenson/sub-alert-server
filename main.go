@@ -7,8 +7,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
-	"example/sub-alert-server/controllers"
 	_ "example/sub-alert-server/docs"
+	"example/sub-alert-server/internals/handlers"
 )
 
 // @title Subscription Alerts And Tracker API
@@ -20,8 +20,8 @@ func main() {
 
 	app.Get("/swagger/*", swagger.HandlerDefault)
 	
-	app.Get("/users", controllers.GetUsers)
-	app.Get("/user", controllers.GetUser)
+	app.Get("/users", handlers.GetUsers)
+	app.Get("/user", handlers.GetUser)
 
 
 	fmt.Println("🚀 Server running on http://localhost:8080/swagger/index.html")
