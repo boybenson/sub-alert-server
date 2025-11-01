@@ -1,6 +1,6 @@
 basePath: /
 definitions:
-  controllers.User:
+  types.User:
     properties:
       age:
         type: integer
@@ -16,21 +16,6 @@ info:
   title: Subscription Alerts And Tracker API
   version: "1.0"
 paths:
-  /user:
-    get:
-      consumes:
-      - application/json
-      description: Get a user
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/controllers.User'
-      summary: Get a user
-      tags:
-      - users
   /users:
     get:
       consumes:
@@ -43,7 +28,7 @@ paths:
           description: OK
           schema:
             items:
-              $ref: '#/definitions/controllers.User'
+              $ref: '#/definitions/types.User'
             type: array
       summary: Get list of users
       tags:
