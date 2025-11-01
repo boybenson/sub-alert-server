@@ -13,7 +13,6 @@ import (
 var DB *mongo.Database
 
 func ConnectDB() {
-
 	mongoURI := os.Getenv("MONGO_URI")
 	client, err := mongo.NewClient(options.Client().ApplyURI(mongoURI))
 	if err != nil {

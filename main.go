@@ -34,6 +34,7 @@ func main() {
 
 	app.Get("/swagger/*", swagger.HandlerDefault)
 	app.Get("/users", handlers.GetUsers)
+	app.Post("/users", handlers.CreateUser)
 
 
 	fmt.Println("🚀 Server running on http://localhost:8080/swagger/index.html")
