@@ -8,29 +8,6 @@
     },
     "basePath": "/",
     "paths": {
-        "/user": {
-            "get": {
-                "description": "Get a user",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "users"
-                ],
-                "summary": "Get a user",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/controllers.User"
-                        }
-                    }
-                }
-            }
-        },
         "/users": {
             "get": {
                 "description": "Get all users",
@@ -50,7 +27,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/controllers.User"
+                                "$ref": "#/definitions/types.User"
                             }
                         }
                     }
@@ -59,7 +36,7 @@
         }
     },
     "definitions": {
-        "controllers.User": {
+        "types.User": {
             "type": "object",
             "properties": {
                 "age": {

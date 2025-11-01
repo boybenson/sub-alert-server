@@ -1,17 +1,10 @@
 package handlers
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"example/sub-alert-server/internals/services"
 
-
-type User struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-	Age  int    `json:"age"`
-}
-
-var users = []User{
-	{ID: 1, Name: "Benson", Age: 25},
-}
+	"github.com/gofiber/fiber/v2"
+)
 
 // GetUsers godoc
 // @Summary Get list of users
@@ -19,21 +12,10 @@ var users = []User{
 // @Tags users
 // @Accept  json
 // @Produce  json
-// @Success 200 {array} User
+// @Success 200 {array} types.User
 // @Router /users [get]
 func GetUsers(c *fiber.Ctx) error {
+	users := services.GetUsers()
 	return c.JSON(users)
 }
 
-
-// GetUser godoc
-// @Summary Get a user
-// @Description Get a user
-// @Tags users
-// @Accept  json
-// @Produce  json
-// @Success 200 {object} User
-// @Router /user [get]
-func GetUser(c *fiber.Ctx) error {
-	return c.JSON(users[0])
-}
